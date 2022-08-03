@@ -14,7 +14,7 @@
     $details = $_GET['details'];
 
     //INSERT INTO `customers` (`id`, `name`, `lastname`, `email`, `telephone`, `details`) VALUES (NULL, 'Pedro', 'Crespi', 'pedro@crespi.com.ar', '+54915-5555-5555', 'First contact');
-    echo $sql = "INSERT INTO `customers` (`id`, `name`, `lastname`, `email`, `telephone`, `details`) VALUES (NULL, '$name', '$lastname', '$email', '$telephone', '$details');";
+    $sql = "INSERT INTO `customers` (`id`, `name`, `lastname`, `email`, `telephone`, `details`) VALUES (NULL, '$name', '$lastname', '$email', '$telephone', '$details');";
 
     $query = mysqli_query($conexion, $sql);
     if($query){
