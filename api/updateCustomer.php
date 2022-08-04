@@ -11,7 +11,7 @@
     $telephone = $_GET['telephone'];
     $details = $_GET['details'];
 
-    echo $sql = "UPDATE `customers` SET `name` = '$name', `lastname` = '$lastname', `email` = '$email', `telephone` = '$telephone', `details` = '$details' WHERE `customers`.`id` = $id;";
+    $sql = "UPDATE `customers` SET `name` = '$name', `lastname` = '$lastname', `email` = '$email', `telephone` = '$telephone', `details` = '$details' WHERE `customers`.`id` = $id;";
 
     $query = mysqli_query($conexion, $sql);
     if($query){
