@@ -1,11 +1,15 @@
 <?php
 
+  //alta de cliente
+  //create customer
+
   //require_once("config/dbconnection.php");
 
   //http://localhost/clasephpcrud/api/createCustomer.php?nombre=Pedro&apellido=Crespi&email=aasdasd@asdasd.com&telefono=234234&detalle=sdfsdf
   
   $conexion = new mysqli("localhost", "root", "", "crudcustomer") or die("not connected".mysqli_connect_error());
   
+  //mandatory fields (name, lastname, email)
   if (isset($_GET['name'])) {
     $name = $_GET['name'];
     $lastname = $_GET['lastname'];
