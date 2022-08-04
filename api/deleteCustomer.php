@@ -1,6 +1,6 @@
 <?php
   //http://localhost/clasephpcrud/api/deleteCustomer.php?id=3
-  $conexion = new mysqli("localhost", "root", "", "sistema") or die("not connected".mysqli_connect_error());
+  $conexion = new mysqli("localhost", "root", "", "crudcustomer") or die("not connected".mysqli_connect_error());
   
   if (isset($_GET['id'])) {
 
