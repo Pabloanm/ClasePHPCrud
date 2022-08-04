@@ -1,11 +1,11 @@
 <?php
 
-// http://localhost/sistema_php/api/readCustomer.php
-  $conexion = new mysqli("localhost", "root", "", "sistema") or die("not connected".mysqli_connect_error());
+  // http://localhost/sistema_php/api/readCustomer.php
+  $conexion = new mysqli("localhost", "root", "", "crudcustomer") or die("not connected".mysqli_connect_error());
 
   $id = $_GET['id'];
 
-  $sql = "SELECT * FROM `clientes` where id = $id";
+  $sql = "SELECT * FROM `customers` where id = $id";
 
   $result = mysqli_query($conexion, $sql);
   

@@ -687,7 +687,7 @@
       }
 
       function deleteCustomer(id, name, lastname) {
-        var CustomerName = " ( " + name + ' ' + lastname + " ) ";
+        var CustomerName = " ( " + name + ' ' + lastname + " ) "; //vienen como string
         var confirmDelete = confirm("¿Do you want to delete " + CustomerName + "?");
         if (!confirmDelete) {
           //false
@@ -708,7 +708,7 @@
       }
 
       function updateCustomer(id) {
-        window.location.href = "editar_cliente.html?id=" + id;
+        window.location.href = "updateCustomer.html?id=" + id;
       }
     </script>
   </body>

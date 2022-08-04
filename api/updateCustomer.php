@@ -1,17 +1,17 @@
 <?php
 
 // http://localhost/sistema_php/api/updateCustomer.php?nombre=Pedro&apellido=Crespi&email=aasdasd@asdasd.com&telefono=234234&detalle=sdfsdf&id=1
-  $conexion = new mysqli("localhost", "root", "", "sistema") or die("not connected".mysqli_connect_error());
+  $conexion = new mysqli("localhost", "root", "", "crudcustomer") or die("not connected".mysqli_connect_error());
   
-  if (isset($_GET['nombre'])) {
+  if (isset($_GET['name'])) {
     $id = $_GET['id'];
-    $nombre = $_GET['nombre'];
-    $apellido = $_GET['apellido'];
+    $name = $_GET['name'];
+    $lastname = $_GET['lastname'];
     $email = $_GET['email'];
-    $telefono = $_GET['telefono'];
-    $detalle = $_GET['detalle'];
+    $telephone = $_GET['telephone'];
+    $details = $_GET['details'];
 
-    $sql = "UPDATE `clientes` SET `nombre` = '$nombre', `apellido` = '$apellido', `email` = '$email', `telefono` = '$telefono', `detalle` = '$detalle' WHERE `clientes`.`id` = $id;";
+    echo $sql = "UPDATE `customers` SET `name` = '$name', `lastname` = '$lastname', `email` = '$email', `telephone` = '$telephone', `details` = '$details' WHERE `customers`.`id` = $id;";
 
     $query = mysqli_query($conexion, $sql);
     if($query){
